@@ -1,21 +1,23 @@
 /**
  * main.js — Core Interactive Functionality & Navigation Engine
- * Handles navbar, scroll tracking, screen switchers, and architecture inspectors.
+ * Handles refined navbar, dropdown 'Lainnya', mobile drawer, scroll tracking, scrollytelling, screen switchers, and architecture inspectors.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Scroll Progress Bar
+  // 1. Scroll Progress Bar & Navbar Scrolled State
   const progressBar = document.getElementById("scroll-progress-bar");
+  const navbar = document.querySelector(".navbar");
+  const backToTopBtn = document.getElementById("back-to-top");
+
   window.addEventListener("scroll", () => {
     const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
     const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const scrolled = (winScroll / height) * 100;
+
     if (progressBar) {
       progressBar.style.width = scrolled + "%";
     }
 
-    // Navbar background change on scroll
-    const navbar = document.querySelector(".navbar");
     if (navbar) {
       if (winScroll > 40) {
         navbar.classList.add("scrolled");
@@ -24,8 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // Back to Top button toggle
-    const backToTopBtn = document.getElementById("back-to-top");
     if (backToTopBtn) {
       if (winScroll > 400) {
         backToTopBtn.classList.add("show");
@@ -35,48 +35,113 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Back to Top action
-  const backToTopBtn = document.getElementById("back-to-top");
   if (backToTopBtn) {
     backToTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 
-  // 2. Mobile Menu Toggle
-  const mobileToggle = document.getElementById("mobile-toggle");
-  const navMenu = document.querySelector(".nav-menu");
-  if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener("click", () => {
-      const isOpen = navMenu.style.display === "flex";
-      if (isOpen) {
-        navMenu.style.display = "";
-        navMenu.classList.remove("mobile-open");
-      } else {
-        navMenu.style.display = "flex";
-        navMenu.classList.add("mobile-open");
+  // 2. Dropdown 'Lainnya ▾' in Action Area
+  const navDropdown = document.getElementById("nav-dropdown");
+  const dropdownBtn = document.getElementById("nav-dropdown-btn");
+
+  if (navDropdown && dropdownBtn) {
+    dropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      navDropdown.classList.toggle("open");
+    });
+
+    // Close dropdown on click outside
+    document.addEventListener("click", (e) => {
+      if (!navDropdown.contains(e.target)) {
+        navDropdown.classList.remove("open");
       }
     });
 
-    // Close mobile menu when clicking any nav link
-    const navLinks = navMenu.querySelectorAll(".nav-link");
-    navLinks.forEach(link => {
+    // Close dropdown when clicking any dropdown link
+    const dropdownLinks = navDropdown.querySelectorAll(".nav-dropdown-link");
+    dropdownLinks.forEach(link => {
       link.addEventListener("click", () => {
-        if (window.innerWidth <= 768) {
-          navMenu.style.display = "";
-          navMenu.classList.remove("mobile-open");
-        }
+        navDropdown.classList.remove("open");
       });
+    });
+
+    // Close on Escape key
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && navDropdown.classList.contains("open")) {
+        navDropdown.classList.remove("open");
+      }
     });
   }
 
-  // 3. Active Nav Links Tracking on Scroll
+  // 3. Mobile Navigation Drawer & Backdrop
+  const mobileToggle = document.getElementById("mobile-toggle");
+  const drawerCloseBtn = document.getElementById("drawer-close-btn");
+  const mobileDrawer = document.getElementById("mobile-nav-drawer");
+  const mobileBackdrop = document.getElementById("mobile-nav-backdrop");
+
+  function openMobileDrawer() {
+    if (mobileDrawer && mobileBackdrop) {
+      mobileDrawer.classList.add("open");
+      mobileBackdrop.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function closeMobileDrawer() {
+    if (mobileDrawer && mobileBackdrop) {
+      mobileDrawer.classList.remove("open");
+      mobileBackdrop.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+  }
+
+  if (mobileToggle) {
+    mobileToggle.addEventListener("click", openMobileDrawer);
+  }
+
+  if (drawerCloseBtn) {
+    drawerCloseBtn.addEventListener("click", closeMobileDrawer);
+  }
+
+  if (mobileBackdrop) {
+    mobileBackdrop.addEventListener("click", closeMobileDrawer);
+  }
+
+  // Close drawer when clicking any link inside drawer
+  const drawerLinks = document.querySelectorAll(".drawer-link, .mobile-nav-drawer .btn");
+  drawerLinks.forEach(link => {
+    link.addEventListener("click", closeMobileDrawer);
+  });
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileDrawer && mobileDrawer.classList.contains("open")) {
+      closeMobileDrawer();
+    }
+  });
+
+  // 4. Active Nav Tracking on Scroll (Mapped cleanly to 6 Primary Nav Items)
+  const navMap = {
+    "cover": "nav-beranda",
+    "problem": "nav-penelitian",
+    "storytelling": "nav-penelitian",
+    "solution": "nav-solusi",
+    "workflow": "nav-alur",
+    "app-showcase": "nav-teknologi",
+    "technology": "nav-teknologi",
+    "devops": "nav-teknologi",
+    "model-features": "nav-teknologi",
+    "results": "nav-hasil",
+    "conclusion": "nav-hasil",
+    "repository": "nav-hasil"
+  };
+
   const sections = document.querySelectorAll("main > section");
-  const navLinks = document.querySelectorAll(".nav-link");
+  const primaryNavLinks = document.querySelectorAll(".nav-primary-menu .nav-link");
 
   const observerOptions = {
     root: null,
-    rootMargin: "-20% 0px -60% 0px",
+    rootMargin: "-25% 0px -65% 0px",
     threshold: 0
   };
 
@@ -84,20 +149,84 @@ document.addEventListener("DOMContentLoaded", () => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const id = entry.target.getAttribute("id");
-        navLinks.forEach(link => {
-          if (link.getAttribute("href") === `#${id}`) {
-            link.classList.add("active");
-          } else {
-            link.classList.remove("active");
-          }
-        });
+        const activeNavId = navMap[id];
+
+        if (activeNavId) {
+          primaryNavLinks.forEach(link => {
+            if (link.id === activeNavId) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        }
       }
     });
   }, observerOptions);
 
   sections.forEach(sec => navObserver.observe(sec));
 
-  // 4. Mobile Showcase Screen Tabs Switcher
+  // 5. Interactive Scrollytelling Narrative Engine
+  const storyScenes = {
+    story_1: {
+      icon: "❓",
+      title: "Babak 1: Keresahan Investor di Kota",
+      desc: "Pak Budi hanya memegang selembar chat pesan singkat. Kandang berjarak 350 km dari kota. Tanpa verifikasi langsung, rasa was-was dan keraguan investasi terus membayangi.",
+      badge: "Asimetri Informasi Tinggi",
+      badgeClass: "badge-proto"
+    },
+    story_2: {
+      icon: "⚠️",
+      title: "Babak 2: Risiko Dinamis Aset Hayati",
+      desc: "Sapi bukan dokumen kertas yang statis. Bobot dan kesehatan dapat merosot dalam sekejap jika terserang stres atau pakan buruk. Ketiadaan akses data memperbesar persepsi risiko.",
+      badge: "Ketidakpastian Lapangan",
+      badgeClass: "badge-proto"
+    },
+    story_3: {
+      icon: "📱",
+      title: "Babak 3: Hadirnya InvestCow Mobile",
+      desc: "Dua saluran dibuka seketika: Price Engine menampilkan grafik kenaikan bobot & nilai secara real-time, sementara CCTV memancarkan live feed visual sapi yang sedang sehat memamah pakan.",
+      badge: "Transparansi Berlapis Aktif",
+      badgeClass: "badge-verified"
+    },
+    story_4: {
+      icon: "🏆",
+      title: "Babak 4: Kepuasan Terbukti 101 Responden",
+      desc: "Bukan sekadar hipotesis, riset UAT SEHATI 2026 terhadap 101 responden membuktikan: aspek Transparansi Sistem meraih skor tertinggi (4,17/5) dengan 97% responden menilai tinggi/sangat tinggi.",
+      badge: "Grand Mean: 4,13 / 5,00",
+      badgeClass: "badge-verified"
+    }
+  };
+
+  const chapterCards = document.querySelectorAll(".story-chapter-card");
+  const sceneIcon = document.getElementById("story-scene-icon");
+  const sceneTitle = document.getElementById("story-scene-title");
+  const sceneDesc = document.getElementById("story-scene-desc");
+  const sceneBadge = document.getElementById("story-scene-badge");
+
+  function updateStoryScene(chapterKey) {
+    const data = storyScenes[chapterKey];
+    if (!data) return;
+
+    if (sceneIcon) sceneIcon.textContent = data.icon;
+    if (sceneTitle) sceneTitle.textContent = data.title;
+    if (sceneDesc) sceneDesc.textContent = data.desc;
+    if (sceneBadge) {
+      sceneBadge.textContent = data.badge;
+      sceneBadge.className = "story-scene-badge " + data.badgeClass;
+    }
+  }
+
+  chapterCards.forEach(card => {
+    card.addEventListener("click", () => {
+      chapterCards.forEach(c => c.classList.remove("active"));
+      card.classList.add("active");
+      const key = card.getAttribute("data-chapter");
+      updateStoryScene(key);
+    });
+  });
+
+  // 6. Mobile Showcase Screen Tabs Switcher
   const showcaseData = {
     market: {
       title: "Pasar & Katalog Sapi Terverifikasi",
@@ -204,7 +333,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 5. Architecture Nodes Inspector
+  // 7. Architecture Nodes Inspector
   const archNodes = document.querySelectorAll(".arch-node-item");
   const archDetailTitle = document.getElementById("arch-detail-title");
   const archDetailDesc = document.getElementById("arch-detail-desc");
@@ -225,7 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 6. DevOps Stage Cards Inspector
+  // 8. DevOps Stage Cards Inspector
   const devopsCards = document.querySelectorAll(".devops-stage-card");
   const devopsDetailTitle = document.getElementById("devops-detail-title");
   const devopsDetailDesc = document.getElementById("devops-detail-desc");
