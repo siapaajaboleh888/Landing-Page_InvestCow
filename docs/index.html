@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>InvestCow — Platform Crowdfunding Ternak Sapi Berbasis Mobile | SEHATI 2026</title>
+  <meta name="title" content="InvestCow — Platform Crowdfunding Ternak Sapi Berbasis Mobile | SEHATI 2026">
+  <meta name="description" content="Showcase penelitian InvestCow: Pengembangan Platform Crowdfunding Ternak Sapi Berbasis Mobile dengan Transparansi Data Real-Time dan Monitoring Visual untuk SEHATI 2026. Peneliti: Moh. Syaiful Anam, Universitas Islam Madura.">
+  <meta name="author" content="Moh. Syaiful Anam">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://siapaajaboleh888.github.io/InvestCow_Project/">
+  <meta property="og:title" content="InvestCow — Transparansi Data Real-Time & Monitoring Visual Ternak">
+  <meta property="og:description" content="Interactive research presentation InvestCow untuk Seminar Nasional Humaniora dan Aplikasi Teknologi Informasi (SEHATI 2026).">
+  <meta property="og:image" content="assets/images/hero_concept.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- SECTION A: NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#overview" class="nav-brand" aria-label="InvestCow Home">
+        <img src="assets/images/logo.png" alt="InvestCow Logo" class="nav-brand-logo">
+        <span class="brand-text">Invest<span>Cow</span></span>
+        <span class="brand-badge">SEHATI 2026</span>
+      </a>
+
+      <nav aria-label="Navigasi Utama">
+        <ul class="nav-menu">
+          <li><a href="#overview" class="nav-link active">Overview</a></li>
+          <li><a href="#problem" class="nav-link">The Problem</a></li>
+          <li><a href="#solution" class="nav-link">Core Solution</a></li>
+          <li><a href="#workflow" class="nav-link">How It Works</a></li>
+          <li><a href="#app-showcase" class="nav-link">App Showcase</a></li>
+          <li><a href="#technology" class="nav-link">Technology</a></li>
+          <li><a href="#results" class="nav-link">Research Results</a></li>
+          <li><a href="#researcher" class="nav-link">Researcher</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-presentation btn-trigger-presentation" title="Tekan tombol 'P' untuk masuk Mode Presentasi">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Mode Presentasi [P]
+        </button>
+        <a href="https://github.com/siapaajaboleh888/InvestCow_Project" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Buka Repositori GitHub">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          Repository
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Buka Menu Navigasi">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION B: HERO -->
+    <section class="hero-section" id="overview">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-conference-tag">
+            <span class="dot"></span>
+            SEHATI 2026 · Seminar Nasional Humaniora & Aplikasi Teknologi Informasi
+          </div>
+          
+          <h1 class="hero-title">
+            Investasi Ternak Lebih <span class="text-gradient">Transparan,</span> Berbasis Data dan Visual.
+          </h1>
+
+          <p class="hero-desc">
+            InvestCow mengembangkan platform crowdfunding ternak sapi berbasis mobile yang menggabungkan informasi nilai investasi secara real-time dan pemantauan visual untuk membantu investor memperoleh informasi yang lebih terbuka dan terverifikasi.
+          </p>
+
+          <div class="hero-researcher-card">
+            <div class="researcher-avatar">👨‍💻</div>
+            <div class="researcher-meta">
+              <h4>Moh. Syaiful Anam · NPM 2022020100078</h4>
+              <p>Teknik Informatika · Universitas Islam Madura, Pamekasan</p>
+            </div>
+          </div>
+
+          <div class="hero-ctas">
+            <a href="#workflow" class="btn btn-primary" id="btn-hero-workflow">
+              Jelajahi Cara Kerja
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#results" class="btn btn-secondary" id="btn-hero-results">
+              Lihat Hasil Penelitian (UAT)
+            </a>
+            <button class="btn btn-presentation btn-trigger-presentation">
+              Mode Presentasi [P]
+            </button>
+          </div>
+        </div>
+
+        <!-- Hero Visual Composition -->
+        <div class="hero-visual-card">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/hero_concept.jpg" alt="Visualisasi Konsep InvestCow Mobile & Visual Kandang" id="hero-banner-img">
+          </div>
+          <div class="hero-visual-caption">
+            <span>Visual Komposisi Konseptual: Mobile FinTech & Monitoring Visual Kandang</span>
+            <span class="badge badge-simulated">Ilustrasi Riset</span>
+          </div>
+          <div class="hero-metric-overlay">
+            <div class="val">4,13 / 5</div>
+            <div class="lbl">Grand Mean Penerimaan<br>101 Responden UAT</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION C: THE PROBLEM -->
+    <section class="problem-section" id="problem">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">01 — Latar Belakang & Masalah</span>
+          <h2 class="section-title">Ketika Investor Tidak Bisa Melihat <span class="text-gradient">Aset yang Mereka Danai</span></h2>
+          <p class="section-subtitle">
+            Model crowdfunding agribisnis memperluas akses pendanaan secara digital, namun ternak bukanlah aset statis di atas kertas. Keterbatasan akses langsung memicu kesenjangan informasi.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Before InvestCow -->
+          <div class="card problem-card">
+            <span class="badge" style="background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; color: #fca5a5;">
+              Sebelum InvestCow (Kondisi Konvensional)
+            </span>
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin-top: 1rem; color: #f8faf9;">
+              Ketergantungan Sepihak & Ketidakpastian
+            </h3>
+            <ul class="comparison-list">
+              <li>
+                <span class="icon">❌</span>
+                <div>
+                  <strong>Aset Hayati yang Berubah Dinamis:</strong> Kondisi kesehatan, pertumbuhan pakan, dan bobot sapi berubah setiap hari tanpa visibilitas langsung.
+                </div>
+              </li>
+              <li>
+                <span class="icon">❌</span>
+                <div>
+                  <strong>Keterbatasan Geografis:</strong> Sebagian besar investor berlokasi jauh dari kandang mitra, menyulitkan kunjungan dan inspeksi fisik rutin.
+                </div>
+              </li>
+              <li>
+                <span class="icon">❌</span>
+                <div>
+                  <strong>Asimetri Informasi Tinggi:</strong> Investor hanya bergantung pada laporan periodik pengelola, tanpa instrumen independen untuk memverifikasi kebenaran fisik aset.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Approach with InvestCow -->
+          <div class="card solution-approach-card">
+            <span class="badge badge-verified">
+              Pendekatan InvestCow (Transparansi Berlapis)
+            </span>
+            <h3 style="font-size: 1.35rem; font-weight: 800; margin-top: 1rem; color: #f8faf9;">
+              Dua Bukti Verifikasi: Angka & Visual
+            </h3>
+            <ul class="comparison-list">
+              <li>
+                <span class="icon">✅</span>
+                <div>
+                  <strong>Transparansi Data Real-Time:</strong> Price Engine menyajikan nilai aset acuan dan riwayat fluktuasi secara terbuka lewat antarmuka mobile.
+                </div>
+              </li>
+              <li>
+                <span class="icon">✅</span>
+                <div>
+                  <strong>Akses Pemantauan Visual:</strong> Integrasi CCTV kandang memungkinkan investor mengamati secara visual kondisi fisik ternak dari ponsel.
+                </div>
+              </li>
+              <li>
+                <span class="icon">✅</span>
+                <div>
+                  <strong>Mengurangi Asimetri Informasi:</strong> Mempertemukan bukti kuantitatif dan bukti visual untuk membangun kepercayaan berbasis data objektif.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="academic-note-box">
+          <div class="note-icon">ℹ️</div>
+          <p>
+            <strong>Catatan Ilmiah:</strong> Transparansi data dan visual dalam penelitian ini dirancang untuk meminimalkan kesenjangan informasi (<em>information asymmetry</em>). Sistem ini tidak menghilangkan seluruh risiko biologis ternak atau volatilitas pasar secara absolut, melainkan menyediakan media verifikasi yang lebih bertanggung jawab bagi investor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION D: THE CORE SOLUTION -->
+    <section class="solution-section" id="solution">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">02 — Solusi Inti</span>
+          <h2 class="section-title">Dua Saluran Transparansi, <span class="text-gradient">Satu Platform</span></h2>
+          <p class="section-subtitle">
+            InvestCow memadukan transmisi data finansial kuantitatif dengan bukti kualitatif visual kandang dalam satu genggaman aplikasi mobile.
+          </p>
+        </div>
+
+        <div class="solution-channels">
+          <!-- Channel 1: Price Engine -->
+          <div class="channel-card">
+            <div class="channel-header">
+              <div class="channel-title">
+                <div class="channel-icon">📈</div>
+                <div>
+                  <h3 style="font-size: 1.15rem; font-weight: 800;">Price Engine</h3>
+                  <span style="font-size: 0.75rem; color: var(--emerald-light);">Transparansi Nilai & Data</span>
+                </div>
+              </div>
+              <span class="badge badge-verified">Mesin Data</span>
+            </div>
+
+            <div class="channel-body">
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Menyajikan informasi nilai investasi acuan, fluktuasi harian, dan grafik tren historis untuk mendukung evaluasi portofolio yang rasional.
+              </p>
+
+              <!-- Interactive Simulator -->
+              <div class="chart-sim-container">
+                <div class="chart-sim-header">
+                  <div>
+                    <div style="font-size: 0.7rem; color: var(--text-muted);">Nilai Acuan Investasi (Simulasi)</div>
+                    <div class="chart-sim-price" id="sim-current-price">Rp 155.000</div>
+                  </div>
+                  <div class="chart-sim-trend" id="sim-current-trend">+2.65% (7 Hari)</div>
+                </div>
+
+                <div class="chart-sim-controls" style="margin-bottom: 0.75rem;">
+                  <button class="chart-time-btn active" data-timeframe="1w">1 Minggu</button>
+                  <button class="chart-time-btn" data-timeframe="1m">1 Bulan</button>
+                  <button class="chart-time-btn" data-timeframe="1y">1 Tahun</button>
+                </div>
+
+                <svg class="svg-chart" id="price-chart-svg" viewBox="0 0 450 150"></svg>
+                <div style="display:flex; justify-content:space-between; font-size:0.65rem; color:var(--text-muted); margin-top:0.35rem;">
+                  <span>*Grafik interaktif demonstrasi data simulasi</span>
+                  <span>Update: Real-Time via Socket</span>
+                </div>
+              </div>
+
+              <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+                <strong>Fokus Menjawab:</strong> <em>"Bagaimana perkembangan nilai investasi ternak saya berdasarkan parameter pasar & bobot?"</em>
+              </div>
+            </div>
+          </div>
+
+          <!-- Channel 2: CCTV Visual Monitoring -->
+          <div class="channel-card">
+            <div class="channel-header">
+              <div class="channel-title">
+                <div class="channel-icon">📹</div>
+                <div>
+                  <h3 style="font-size: 1.15rem; font-weight: 800;">Smart Visual Monitoring</h3>
+                  <span style="font-size: 0.75rem; color: var(--emerald-light);">Transparansi Visual Kandang</span>
+                </div>
+              </div>
+              <span class="badge badge-verified">Integrasi IoT</span>
+            </div>
+
+            <div class="channel-body">
+              <p style="font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+                Memberikan akses pemantauan visual langsung terhadap aktivitas kandang, melengkapi laporan numerik dengan bukti fisik yang dapat diobservasi.
+              </p>
+
+              <!-- Simulated CCTV Screen -->
+              <div class="cctv-sim-container">
+                <div class="cctv-scanline"></div>
+                <div class="cctv-overlay">
+                  <div class="cctv-header">
+                    <div class="cctv-rec">
+                      <span class="cctv-rec-dot"></span>
+                      <span>LIVE FEED</span>
+                    </div>
+                    <div style="color: #6ee7b7;">FPS: 30 · HD 1080p</div>
+                  </div>
+                  <div>
+                    <div id="cctv-timecode" style="letter-spacing: 0.05em; font-weight:600;">2026-10-20 --:--:-- WIB · CAM-01 KANDANG A</div>
+                    <div style="font-size: 0.65rem; color: #94a3b8;">SEKTOR PEN 03 · MONITORING AKTIF</div>
+                  </div>
+                </div>
+                <img src="assets/images/hero_concept.jpg" alt="Simulasi CCTV Kandang" class="cctv-bg-art">
+              </div>
+
+              <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.5;">
+                <strong>Fokus Menjawab:</strong> <em>"Bagaimana kondisi nyata kandang dan ternak fisik yang saya danai secara kasat mata?"</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Layered Model Diagram from PPT Slide 6 -->
+        <div class="layered-model-banner text-center">
+          <span class="section-tag" style="margin-bottom: 0.5rem;">Model Konseptual Penelitian (Gambar 3 PPT)</span>
+          <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1.5rem;">
+            Model Transparansi Berlapis InvestCow
+          </h3>
+          <img src="assets/images/layered_transparency.png" alt="Gambar 3. Model Transparansi Berlapis InvestCow" class="layered-model-img">
+          <p style="max-width: 820px; margin: 0 auto; font-size: 0.85rem; color: var(--text-secondary);">
+            Model ini mengintegrasikan Transparansi Nilai Investasi (Price Engine), Transparansi Kondisi Fisik (Smart Visual Monitoring), dan Transparansi Proses Platform untuk mencapai 4 sasaran: meningkatkan kepercayaan investor, meningkatkan kualitas keputusan, menurunkan persepsi risiko, serta mendukung keberlanjutan investasi.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION E: ACTORS AND TRANSACTION WORKFLOW -->
+    <section class="workflow-section" id="workflow">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">03 — Alur Multi-Aktor & Transaksi</span>
+          <h2 class="section-title">Bagaimana InvestCow <span class="text-gradient">Bekerja?</span></h2>
+          <p class="section-subtitle">
+            Diagram alur interaktif multi-aktor. Klik aktor atau tahapan untuk meninjau peran, input, proses, output, dan status verifikasi implementasinya.
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="workflow-filter-bar">
+          <button class="workflow-filter-btn active" data-filter="all">
+            🌐 Semua Alur (End-to-End)
+          </button>
+          <button class="workflow-filter-btn" data-filter="investor">
+            👤 Alur Investor
+          </button>
+          <button class="workflow-filter-btn" data-filter="admin">
+            ⚙️ Alur Pengelola / Admin
+          </button>
+          <button class="workflow-filter-btn" data-filter="data">
+            📡 Alur Data & Visual
+          </button>
+        </div>
+
+        <!-- Interactive Diagram Grid -->
+        <div class="workflow-container">
+          <div class="workflow-diagram">
+            <div class="actors-lanes">
+              
+              <!-- Actor 1: Investor -->
+              <div class="actor-lane" data-actor="investor">
+                <div class="actor-lane-header" style="cursor: pointer;">
+                  <div class="actor-identity">
+                    <div class="actor-avatar">👤</div>
+                    <div>
+                      <div class="actor-name">Investor</div>
+                      <span style="font-size: 0.725rem; color: var(--text-muted);">Pemberi Modal / Crowdfunder</span>
+                    </div>
+                  </div>
+                  <span class="badge badge-verified">Aktor Utama</span>
+                </div>
+                <div class="steps-row">
+                  <div class="step-node active" data-step="reg">
+                    <span>1. Registrasi & Login</span>
+                  </div>
+                  <span class="step-arrow">→</span>
+                  <div class="step-node" data-step="katalog">
+                    <span>2. Eksplorasi Proyek</span>
+                  </div>
+                  <span class="step-arrow">→</span>
+                  <div class="step-node" data-step="confirm_tx">
+                    <span>5. Konfirmasi & Bayar</span>
+                  </div>
+                  <span class="step-arrow">→</span>
+                  <div class="step-node" data-step="portfolio_mon">
+                    <span>6. Pantau Portofolio</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Actor 2: Pengelola Platform / Admin -->
+              <div class="actor-lane" data-actor="admin">
+                <div class="actor-lane-header" style="cursor: pointer;">
+                  <div class="actor-identity">
+                    <div class="actor-avatar">⚙️</div>
+                    <div>
+                      <div class="actor-name">Pengelola Platform / Admin</div>
+                      <span style="font-size: 0.725rem; color: var(--text-muted);">Kurasi Proyek & Tata Kelola</span>
+                    </div>
+                  </div>
+                  <span class="badge badge-proto">Manajemen Sistem</span>
+                </div>
+                <div class="steps-row">
+                  <div class="step-node" data-step="katalog">
+                    <span>Kurasi Proyek Ternak</span>
+                  </div>
+                  <span class="step-arrow">→</span>
+                  <div class="step-node" data-step="price_engine">
+                    <span>Verifikasi Nilai Awal</span>
+                  </div>
+                  <span class="step-arrow">→</span>
+                  <div class="step-node" data-step="confirm_tx">
+                    <span>Validasi Mutasi Transaksi</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Actor 3: Peternak / Pengelola Kandang -->
+              <div class="actor-lane" data-actor="peternak">
+                <div class="actor-lane-header" style="cursor: pointer;">
+                  <div class="actor-identity">
+                    <div class="actor-avatar">🌾</div>
+                    <div>
+                      <div class="actor-name">Peternak / Mitra Kandang</div>
+                      <span style="font-size: 0.725rem; color: var(--text-muted);">Pemelihara Aset Fisik di Lapangan</span>
+                    </div>
+                  </div>
+                  <span class="badge badge-verified">Operasional Lapangan</span>
+                </div>
+                <div class="steps-row">
+                  <div class="step-node" data-step="cctv_view">
+                    <span>Perawatan Ternak & Pakan</span>
+                  </div>
+                  <span class="step-arrow">→</span>
+                  <div class="step-node" data-step="cctv_view">
+                    <span>Fasilitasi Area Sorot CCTV</span>
+                  </div>
+                  <span class="step-arrow">→</span>
+                  <div class="step-node" data-step="portfolio_mon">
+                    <span>Input Catatan Pertumbuhan</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Actor 4: Sistem InvestCow (Backend) -->
+              <div class="actor-lane" data-actor="sistem">
+                <div class="actor-lane-header" style="cursor: pointer;">
+                  <div class="actor-identity">
+                    <div class="actor-avatar">💻</div>
+                    <div>
+                      <div class="actor-name">Sistem InvestCow (Backend & Socket.io)</div>
+                      <span style="font-size: 0.725rem; color: var(--text-muted);">Pemrosesan Logika & Distribusi Data</span>
+                    </div>
+                  </div>
+                  <span class="badge badge-verified">Node.js + MySQL</span>
+                </div>
+                <div class="steps-row">
+                  <div class="step-node" data-step="reg">
+                    <span>Autentikasi JWT</span>
+                  </div>
+                  <span class="step-arrow">→</span>
+                  <div class="step-node" data-step="price_engine">
+                    <span>3. Price Engine Real-Time</span>
+                  </div>
+                  <span class="step-arrow">→</span>
+                  <div class="step-node" data-step="confirm_tx">
+                    <span>Pencatatan Database</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Actor 5: CCTV & Sensor Kandang -->
+              <div class="actor-lane" data-actor="cctv">
+                <div class="actor-lane-header" style="cursor: pointer;">
+                  <div class="actor-identity">
+                    <div class="actor-avatar">📹</div>
+                    <div>
+                      <div class="actor-name">CCTV & Sumber Data Visual</div>
+                      <span style="font-size: 0.725rem; color: var(--text-muted);">Kamera IoT Pemantau Kandang</span>
+                    </div>
+                  </div>
+                  <span class="badge badge-verified">Kanal Visual</span>
+                </div>
+                <div class="steps-row">
+                  <div class="step-node" data-step="cctv_view">
+                    <span>4. Tangkap Feed Visual</span>
+                  </div>
+                  <span class="step-arrow">→</span>
+                  <div class="step-node" data-step="cctv_view">
+                    <span>Streaming ke Aplikasi Mobile</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Legend for Badges -->
+            <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border-subtle); font-size:0.75rem;">
+              <span style="color:var(--text-muted); font-weight:700;">Status Verifikasi Fitur:</span>
+              <span class="badge badge-verified">🟢 Terverifikasi di Kode / UI Asli</span>
+              <span class="badge badge-proto">🟡 Prototipe / Simulasi Alur</span>
+              <span class="badge badge-concept">🔵 Konseptual / Rencana</span>
+            </div>
+          </div>
+
+          <!-- Inspector Sidebar -->
+          <aside class="workflow-inspector" id="workflow-inspector" aria-live="polite">
+            <div class="inspector-header">
+              <span class="badge badge-verified" id="wf-inspector-badge">Terverifikasi di Kode</span>
+              <h3 class="inspector-title" id="wf-inspector-title">1. Registrasi & Login</h3>
+              <div style="font-size: 0.8rem; color: var(--emerald-light); font-weight: 600;" id="wf-inspector-role">Aktor Terkait: Investor</div>
+            </div>
+
+            <div class="inspector-section">
+              <div class="inspector-label">Tanggung Jawab / Deskripsi</div>
+              <div class="inspector-value" id="wf-inspector-resp">
+                Investor mendaftarkan akun di aplikasi Flutter dengan data identitas terverifikasi untuk mengakses pasar proyek.
+              </div>
+            </div>
+
+            <div class="inspector-section">
+              <div class="inspector-label">Input yang Diterima</div>
+              <div class="inspector-value" id="wf-inspector-input">
+                Nomor telepon / email dan kata sandi.
+              </div>
+            </div>
+
+            <div class="inspector-section">
+              <div class="inspector-label">Proses yang Dijalankan</div>
+              <div class="inspector-value" id="wf-inspector-process">
+                Validasi kredensial dan pembuatan sesi token JWT terenkripsi.
+              </div>
+            </div>
+
+            <div class="inspector-section">
+              <div class="inspector-label">Output yang Dihasilkan</div>
+              <div class="inspector-value" id="wf-inspector-output">
+                Akses aman ke dashboard portofolio investor.
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION F: MOBILE APPLICATION SHOWCASE -->
+    <section class="showcase-section" id="app-showcase">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">04 — Antarmuka Pengguna</span>
+          <h2 class="section-title">Dirancang untuk Memantau Investasi <span class="text-gradient">dari Genggaman</span></h2>
+          <p class="section-subtitle">
+            Implementasi antarmuka Flutter Material Design 3. Didesain secara ergonomis agar investor dapat meninjau data aset dan visual kandang kapan pun.
+          </p>
+        </div>
+
+        <div class="showcase-wrapper">
+          <!-- Smartphone Mockup -->
+          <div class="smartphone-frame" aria-label="Mockup Ponsel Aplikasi InvestCow">
+            <div class="smartphone-notch"></div>
+            <div class="smartphone-screen" id="phone-dynamic-screen">
+              <!-- Initial Screen: Market -->
+              <div style="background: rgba(16,185,129,0.1); border: 1px solid rgba(52,211,153,0.3); border-radius: 12px; padding: 12px; margin-bottom: 12px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                  <span style="font-weight:800; color:#34d399; font-size:0.85rem;">Sapi Bali #B04</span>
+                  <span class="badge badge-verified" style="font-size:0.65rem;">Tersedia</span>
+                </div>
+                <div style="font-size:0.75rem; color:#cbd5e1; margin-bottom:4px;">Bobot Saat Ini: <strong>340 kg</strong></div>
+                <div style="font-size:0.75rem; color:#cbd5e1; margin-bottom:4px;">Harga Investasi: <strong>Rp 15.650.000</strong></div>
+                <div style="font-size:0.7rem; color:#94a3b8;">Kandang Mitra: Pamekasan, Madura</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+                  <span style="font-weight:800; color:#f8faf9; font-size:0.85rem;">Sapi Limosin #L02</span>
+                  <span class="badge badge-proto" style="font-size:0.65rem;">Dalam Proses</span>
+                </div>
+                <div style="font-size:0.75rem; color:#cbd5e1; margin-bottom:4px;">Bobot: <strong>410 kg</strong></div>
+                <div style="font-size:0.75rem; color:#cbd5e1;">Target Panen: <strong>4 Bulan</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Tabs & Original Research Screenshots -->
+          <div>
+            <div style="margin-bottom: 1.5rem;">
+              <h3 id="showcase-screen-heading" style="font-size: 1.4rem; font-weight: 800; color: #fff;">Pasar & Katalog Sapi Terverifikasi</h3>
+              <p id="showcase-screen-sub" style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+                Menampilkan daftar proyek sapi aktif (seperti Sapi Bali) dengan spesifikasi bobot awal, estimasi harga unit, dan lokasi kandang mitra.
+              </p>
+            </div>
+
+            <div class="showcase-nav-tabs">
+              <div class="showcase-tab-card active" data-tab="market">
+                <div class="tab-icon">🛒</div>
+                <div class="tab-info">
+                  <h4>Pasar & Katalog Sapi</h4>
+                  <p>Katalog proyek lengkap dengan filter jenis, bobot, dan profil kandang mitra.</p>
+                </div>
+              </div>
+
+              <div class="showcase-tab-card" data-tab="price">
+                <div class="tab-icon">📊</div>
+                <div class="tab-info">
+                  <h4>Monitor Nilai (Price Engine)</h4>
+                  <p>Candlestick dan sparkline real-time untuk transparansi tren nilai investasi.</p>
+                </div>
+              </div>
+
+              <div class="showcase-tab-card" data-tab="cctv">
+                <div class="tab-icon">📹</div>
+                <div class="tab-info">
+                  <h4>Pemantauan Visual CCTV</h4>
+                  <p>Akses stream langsung ke kandang ternak untuk pembuktian visual kasat mata.</p>
+                </div>
+              </div>
+
+              <div class="showcase-tab-card" data-tab="portfolio">
+                <div class="tab-icon">💼</div>
+                <div class="tab-info">
+                  <h4>Ringkasan Portofolio</h4>
+                  <p>Alokasi unit sapi yang didanai, akumulasi nilai aset, dan riwayat transaksi.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Original Research Capture from PPT Slide 7 -->
+            <div style="margin-top: 2rem; background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 1.25rem;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-primary);">Dokumentasi UI Penelitian Asli (PPT Slide 7):</span>
+                <span class="badge badge-verified">Screenshot Riset</span>
+              </div>
+              <img src="assets/images/mobile_screens_grid.jpg" alt="12 Tampilan Antarmuka Asli InvestCow Mobile" style="border-radius: 8px; border: 1px solid var(--border-subtle); max-height: 220px; object-fit: cover; width: 100%;">
+              <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">
+                Mencakup 12 layar: Splash, Login, Pasar Sapi, Monitor Harga Candlestick, Portofolio Donut Chart, Riwayat Transaksi, Katalog Filter, Notifikasi, Detail Sapi & Peta Kandang, Proses Pembelian, Dashboard Agen, dan Pengaturan Akun.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION G: SYSTEM ARCHITECTURE -->
+    <section class="arch-section" id="technology">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">05 — Arsitektur Sistem</span>
+          <h2 class="section-title">Arsitektur Teknologi di Balik <span class="text-gradient">InvestCow</span></h2>
+          <p class="section-subtitle">
+            Dibangun dengan arsitektur modular multi-tier untuk memastikan pemrosesan real-time yang responsif, keamanan data, dan integritas transaksi.
+          </p>
+        </div>
+
+        <div class="architecture-grid">
+          <!-- Architecture Visual (PPT Slide 5) -->
+          <div class="arch-visual-box">
+            <span class="section-tag" style="margin-bottom: 0.75rem;">Diagram 3 Lapisan (Slide 5 PPT)</span>
+            <img src="assets/images/system_architecture.png" alt="Arsitektur Sistem 3 Lapisan InvestCow">
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.75rem;">
+              Lapisan Atas (Frontend Flutter) → Lapisan Tengah (Node.js & Real-Time Price Engine) → Lapisan Bawah (MySQL) dikelilingi Sistem Keamanan & DevOps.
+            </p>
+          </div>
+
+          <!-- Architecture Components Explorer -->
+          <div>
+            <div class="arch-nodes-list">
+              <div class="arch-node-item active" data-tech="Flutter + Material Design 3" data-role="Lapisan Atas (Frontend Mobile)" data-desc="Aplikasi mobile cross-platform yang digunakan investor untuk memantau portofolio, memeriksa grafik harga, dan melihat stream visual kandang.">
+                <div class="arch-node-top">
+                  <span class="arch-tech-name">📱 Flutter + Material Design 3</span>
+                  <span class="arch-layer-badge">Frontend</span>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-secondary);">Antarmuka aplikasi mobile cepat & responsif.</div>
+              </div>
+
+              <div class="arch-node-item" data-tech="Node.js + Express" data-role="Lapisan Tengah (Backend Service)" data-desc="Menangani REST API autentikasi, manajemen data transaksi, validasi aturan bisnis, dan orkestrasi Price Engine.">
+                <div class="arch-node-top">
+                  <span class="arch-tech-name">⚡ Node.js + Express</span>
+                  <span class="arch-layer-badge">Backend</span>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-secondary);">Logika bisnis dan pemrosesan permintaan transaksi.</div>
+              </div>
+
+              <div class="arch-node-item" data-tech="Socket.io" data-role="Real-Time Data Distribution" data-desc="Mendistribusikan pembaruan harga Price Engine secara real-time ke aplikasi ponsel tanpa membebani server dengan polling berulang.">
+                <div class="arch-node-top">
+                  <span class="arch-tech-name">🔄 Socket.io WebSocket</span>
+                  <span class="arch-layer-badge">Real-Time</span>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-secondary);">Streaming event harga seketika ke ribuan klien.</div>
+              </div>
+
+              <div class="arch-node-item" data-tech="MySQL Database" data-role="Lapisan Bawah (Penyimpanan Data)" data-desc="Menyimpan relasi data pengguna, metadata sapi ternak, riwayat transaksi pendanaan, dan log perubahan nilai investasi.">
+                <div class="arch-node-top">
+                  <span class="arch-tech-name">🗄️ MySQL Database</span>
+                  <span class="arch-layer-badge">Database</span>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-secondary);">Integritas data transaksional dan riwayat aset.</div>
+              </div>
+
+              <div class="arch-node-item" data-tech="Git + GitHub Actions" data-role="Sistem CI/CD & Keamanan" data-desc="Otomatisasi pengujian dan build aplikasi. Mengurangi human-error dengan pipeline integrasi berkelanjutan (rata-rata 1–3 menit per siklus).">
+                <div class="arch-node-top">
+                  <span class="arch-tech-name">🚀 Git + GitHub Actions</span>
+                  <span class="arch-layer-badge">CI/CD DevOps</span>
+                </div>
+                <div style="font-size: 0.85rem; color: var(--text-secondary);">Otomatisasi build dan validasi kode berkelanjutan.</div>
+              </div>
+            </div>
+
+            <!-- Detail Box -->
+            <div style="margin-top: 1.5rem; background: var(--bg-surface-elevated); border: 1px solid var(--border-accent); border-radius: var(--radius-md); padding: 1.25rem;">
+              <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--emerald-light); font-weight: 700;" id="arch-detail-role">Lapisan Atas (Frontend Mobile)</div>
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: #fff; margin: 0.25rem 0;" id="arch-detail-title">Flutter + Material Design 3</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;" id="arch-detail-desc">
+                Aplikasi mobile cross-platform yang digunakan investor untuk memantau portofolio, memeriksa grafik harga, dan melihat stream visual kandang.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION H: R&D AND DEVOPS LIFECYCLE -->
+    <section class="devops-section" id="devops">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">06 — Metodologi Pengembangan</span>
+          <h2 class="section-title">Dikembangkan Melalui <span class="text-gradient">Siklus Terstruktur</span></h2>
+          <p class="section-subtitle">
+            Penelitian menggunakan pendekatan <em>Research and Development</em> (R&D) yang dipadukan dengan siklus 8 tahap DevOps untuk iterasi cepat dan pengujian berkelanjutan.
+          </p>
+        </div>
+
+        <div class="devops-grid">
+          <!-- DevOps Visual (PPT Slide 4) -->
+          <div class="devops-img-container text-center">
+            <span class="section-tag" style="margin-bottom: 0.75rem;">Siklus DevOps InvestCow (Slide 4 PPT)</span>
+            <img src="assets/images/devops_lifecycle.png" alt="Siklus 8 Tahap DevOps InvestCow">
+            <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem;">
+              Siklus berulang tanpa henti: Dev (Plan → Code → Build → Test) terhubung dengan Ops (Release → Deploy → Operate → Monitor).
+            </p>
+          </div>
+
+          <!-- 8 Stages Interactive Grid -->
+          <div>
+            <div class="devops-stages-timeline">
+              <div class="devops-stage-card active" data-stage="Plan" data-desc="Menganalisis kebutuhan investor, merumuskan fitur transparansi harga & CCTV, serta menyusun arsitektur sistem.">
+                <div class="stage-num">Tahap 01</div>
+                <div class="stage-title">Plan</div>
+                <div class="stage-desc">Merancang kebutuhan fungsional & arsitektur.</div>
+              </div>
+
+              <div class="devops-stage-card" data-stage="Code" data-desc="Menulis kode aplikasi mobile Flutter dan logika backend Node.js menggunakan standar clean code dan git workflow.">
+                <div class="stage-num">Tahap 02</div>
+                <div class="stage-title">Code</div>
+                <div class="stage-desc">Implementasi kode frontend & backend.</div>
+              </div>
+
+              <div class="devops-stage-card" data-stage="Build" data-desc="Menyiapkan dependensi, kompilasi aset, dan bundling paket aplikasi secara terotomatisasi.">
+                <div class="stage-num">Tahap 03</div>
+                <div class="stage-title">Build</div>
+                <div class="stage-desc">Kompilasi paket aplikasi otomatis.</div>
+              </div>
+
+              <div class="devops-stage-card" data-stage="Test" data-desc="Menguji fungsi modul harga, koneksi socket, dan alur autentikasi sebelum dirilis ke server.">
+                <div class="stage-num">Tahap 04</div>
+                <div class="stage-title">Test</div>
+                <div class="stage-desc">Validasi fungsional dan integritas sistem.</div>
+              </div>
+
+              <div class="devops-stage-card" data-stage="Release" data-desc="Mempersiapkan rilis versi stabil dengan semantic versioning dan dokumentasi perubahan kode.">
+                <div class="stage-num">Tahap 05</div>
+                <div class="stage-title">Release</div>
+                <div class="stage-desc">Persiapan artefak rilis yang stabil.</div>
+              </div>
+
+              <div class="devops-stage-card" data-stage="Deploy" data-desc="Penyebaran versi aplikasi ke lingkungan target pengujian dan staging melalui GitHub Actions.">
+                <div class="stage-num">Tahap 06</div>
+                <div class="stage-title">Deploy</div>
+                <div class="stage-desc">Deployment artefak ke server target.</div>
+              </div>
+
+              <div class="devops-stage-card" data-stage="Operate" data-desc="Menjalankan aplikasi untuk digunakan oleh responden pengujian (UAT) dalam skenario simulasi.">
+                <div class="stage-num">Tahap 07</div>
+                <div class="stage-title">Operate</div>
+                <div class="stage-desc">Menjalankan operasional aplikasi.</div>
+              </div>
+
+              <div class="devops-stage-card" data-stage="Monitor" data-desc="Mengamati metrik kinerja sistem, waktu siklus build CI/CD (1–3 menit), dan umpan balik responden.">
+                <div class="stage-num">Tahap 08</div>
+                <div class="stage-title">Monitor</div>
+                <div class="stage-desc">Evaluasi hasil operasi sebagai bahan perbaikan.</div>
+              </div>
+            </div>
+
+            <!-- Stage detail info -->
+            <div style="margin-top: 1.5rem; background: var(--bg-surface-elevated); border: 1px solid var(--border-accent); border-radius: var(--radius-md); padding: 1.25rem;">
+              <h4 style="font-size: 1.05rem; font-weight: 800; color: var(--emerald-light);" id="devops-detail-title">Tahap: Plan</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.35rem;" id="devops-detail-desc">
+                Menganalisis kebutuhan investor, merumuskan fitur transparansi harga & CCTV, serta menyusun arsitektur sistem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION I: SMART FEATURES -->
+    <section class="features-section" id="smart-features">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">07 — Fitur Pendukung</span>
+          <h2 class="section-title">Fitur yang Mendukung <span class="text-gradient">Transparansi & Pemantauan</span></h2>
+          <p class="section-subtitle">
+            Fitur terencana yang dipaparkan dalam materi riset SEHATI 2026, disajikan dengan status implementasi yang jujur dan transparan.
+          </p>
+        </div>
+
+        <div class="smart-features-grid">
+          <!-- Feature 1: Weight Estimation -->
+          <div class="smart-feature-card">
+            <div>
+              <div class="feature-icon-wrapper">⚖️</div>
+              <h3 class="feature-title">Intelligent Weight Estimation</h3>
+              <p class="feature-desc">
+                Memperkirakan kenaikan bobot sapi secara algoritmik dari data pakan dan pertumbuhan harian, meminimalkan penimbangan manual di timbangan kandang yang kerap memicu stres ternak.
+              </p>
+            </div>
+            <div>
+              <span class="badge badge-proto">🟡 Prototipe Algoritmik</span>
+              <p style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.5rem;">
+                *Estimasi berbasis pertumbuhan historis, bukan timbangan sensor medis real-time.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 2: Cattle Grade Classification -->
+          <div class="smart-feature-card">
+            <div>
+              <div class="feature-icon-wrapper">🏷️</div>
+              <h3 class="feature-title">Cattle Grade Classification</h3>
+              <p class="feature-desc">
+                Mengelompokkan ternak ke dalam tingkatan mutu (Grade A, B, atau C) berdasarkan parameter umur, ras sapi (Bali, Limosin, Simental), dan riwayat kesehatan tercatat.
+              </p>
+            </div>
+            <div>
+              <span class="badge badge-proto">🟡 Prototipe Berbasis Aturan</span>
+              <p style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.5rem;">
+                *Klasifikasi mengacu pada parameter input manual sistem kurasi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature 3: Smart Alert -->
+          <div class="smart-feature-card">
+            <div>
+              <div class="feature-icon-wrapper">🔔</div>
+              <h3 class="feature-title">Smart Alert</h3>
+              <p class="feature-desc">
+                Mengirimkan notifikasi instan kepada investor saat terjadi pembaruan harga signifikan, konfirmasi status transaksi berhasil, atau pengingat jadwal pemeliharaan berkala dari kandang.
+              </p>
+            </div>
+            <div>
+              <span class="badge badge-verified">🟢 Terintegrasi di Aplikasi</span>
+              <p style="font-size: 0.725rem; color: var(--text-muted); margin-top: 0.5rem;">
+                *Didukung oleh event messaging dan antarmuka notifikasi Flutter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION J: RESEARCH RESULTS (UAT) -->
+    <section class="results-section" id="results">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">08 — Hasil Evaluasi Empiris</span>
+          <h2 class="section-title">Apa Kata <span class="text-gradient">101 Responden?</span></h2>
+          <p class="section-subtitle">
+            Hasil pengujian penerimaan pengguna (User Acceptance Testing / UAT) menggunakan skala Likert 1–5 berdasarkan instrumen 20 pernyataan dan 4 variabel penelitian.
+          </p>
+        </div>
+
+        <!-- Big Number Statistics Row -->
+        <div class="results-stats-row">
+          <div class="stat-box">
+            <div class="stat-number gold" data-target="4.13" data-decimal="true">4,13</div>
+            <div class="stat-label">Grand Mean (dari 5.0)</div>
+            <div class="stat-sub">Kategori Penerimaan Tinggi</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number" data-target="101" data-decimal="false">101</div>
+            <div class="stat-label">Total Responden</div>
+            <div class="stat-sub">Investor (63,4%), Peternak (31,7%), Dinas (4,0%)</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number" data-target="97" data-decimal="false" data-suffix="%">97%</div>
+            <div class="stat-label">Menilai Tinggi / Sangat Tinggi</div>
+            <div class="stat-sub">Persepsi positif menyeluruh</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-number" data-target="3" data-decimal="false" data-suffix=" m">1–3 m</div>
+            <div class="stat-label">Siklus CI/CD Pipeline</div>
+            <div class="stat-sub">Build & test otomatis konsisten</div>
+          </div>
+        </div>
+
+        <!-- Horizontal Bar Chart: 4 Variables -->
+        <div class="chart-card-wrapper">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 2rem; flex-wrap:wrap; gap:1rem;">
+            <div>
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: #fff;">Evaluasi 4 Variabel Penelitian UAT</h3>
+              <p style="font-size: 0.825rem; color: var(--text-muted);">Skala pengukuran Likert 1.00 (Sangat Rendah) hingga 5.00 (Sangat Tinggi)</p>
+            </div>
+            <span class="badge badge-verified">Grand Mean: 4,13 / 5,00</span>
+          </div>
+
+          <!-- Variable 1: Kualitas Informasi -->
+          <div class="bar-chart-row">
+            <div class="bar-chart-meta">
+              <span style="color: var(--text-primary);">Kualitas Informasi (Information Quality)</span>
+              <span style="color: var(--emerald-light); font-family: var(--font-mono);">4,12 / 5,00 (82,4%)</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill" data-score="4.12"></div>
+            </div>
+          </div>
+
+          <!-- Variable 2: Transparansi Sistem -->
+          <div class="bar-chart-row">
+            <div class="bar-chart-meta">
+              <span style="color: var(--text-primary); font-weight: 800;">
+                Transparansi Sistem (System Transparency) 🏆 <span style="font-size:0.75rem; color:var(--gold-accent);">(Nilai Tertinggi)</span>
+              </span>
+              <span style="color: var(--gold-accent); font-family: var(--font-mono); font-weight: 800;">4,17 / 5,00 (83,4%)</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill highlight" data-score="4.17"></div>
+            </div>
+          </div>
+
+          <!-- Variable 3: Kepercayaan Pengguna -->
+          <div class="bar-chart-row">
+            <div class="bar-chart-meta">
+              <span style="color: var(--text-primary);">Kepercayaan Pengguna (User Trust)</span>
+              <span style="color: var(--emerald-light); font-family: var(--font-mono);">4,11 / 5,00 (82,2%)</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill" data-score="4.11"></div>
+            </div>
+          </div>
+
+          <!-- Variable 4: Usability -->
+          <div class="bar-chart-row">
+            <div class="bar-chart-meta">
+              <span style="color: var(--text-primary);">Kegunaan Sistem (System Usability)</span>
+              <span style="color: var(--emerald-light); font-family: var(--font-mono);">4,12 / 5,00 (82,4%)</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill" data-score="4.12"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Findings Highlights -->
+        <div class="key-findings-grid">
+          <!-- Item 1 -->
+          <div class="finding-card">
+            <div class="finding-score-pill">
+              4,28
+              <span>SKOR</span>
+            </div>
+            <div class="finding-content">
+              <h4>Akurasi & Keamanan Data Transaksi</h4>
+              <p>Mendapat penilaian tertinggi dalam UAT. Responden mengapresiasi pencatatan transaksi yang transparan dan dapat dilacak.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="finding-card">
+            <div class="finding-score-pill">
+              4,24
+              <span>SKOR</span>
+            </div>
+            <div class="finding-content">
+              <h4>Verifikasi Fisik via CCTV Kandang</h4>
+              <p>Salah satu skor paling kuat pada aspek transparansi, membuktikan pentingnya bukti visual bagi ketenangan investor.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="finding-card">
+            <div class="finding-score-pill">
+              4,23
+              <span>SKOR</span>
+            </div>
+            <div class="finding-content">
+              <h4>Keterbukaan Mekanisme Harga</h4>
+              <p>Investor menilai positif tampilan grafik fluktuasi nilai Price Engine yang tidak terkesan disembunyikan.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 (Area of Improvement) -->
+          <div class="finding-card">
+            <div class="finding-score-pill warn">
+              3,99
+              <span>SKOR</span>
+            </div>
+            <div class="finding-content">
+              <h4 style="color: var(--gold-accent);">Area Perbaikan: Laporan Portofolio</h4>
+              <p>Skor relatif lebih rendah (3,99). Responden menginginkan rincian laporan mutasi dan visualisasi pembagian dividen yang lebih mendalam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION K: RESEARCH INTERPRETATION -->
+    <section class="interpretation-section" id="interpretation">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">09 — Interpretasi Ilmiah</span>
+          <h2 class="section-title">Transparansi Dinilai Baik, <span class="text-gradient">tetapi Tetap Ada Ruang Evaluasi</span></h2>
+          <p class="section-subtitle">
+            Pemisahan yang jujur dan proporsional antara hasil pengukuran empiris, interpretasi akademis yang wajar, dan batasan penelitian.
+          </p>
+        </div>
+
+        <div class="interpretation-grid">
+          <!-- Column 1: Hasil Pengukuran -->
+          <div class="interpretation-card card-empiric">
+            <div class="inter-header">
+              <span style="font-size: 1.3rem;">📊</span>
+              <h4>Hasil Pengukuran</h4>
+            </div>
+            <ul class="inter-list">
+              <li>Grand mean 4,13 dari skala 5 menunjukkan penerimaan yang kuat di kalangan responden.</li>
+              <li>Variabel Transparansi Sistem mencapai rerata tertinggi (4,17), dipimpin oleh integrasi CCTV (4,24).</li>
+              <li>Akurasi transaksi dinilai sangat tinggi (4,28) oleh mayoritas calon investor.</li>
+              <li>Waktu siklus build CI/CD rata-rata 1–3 menit dengan tingkat keberhasilan konsisten.</li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Interpretasi -->
+          <div class="interpretation-card card-meaning">
+            <div class="inter-header">
+              <span style="font-size: 1.3rem;">💡</span>
+              <h4>Interpretasi Riset</h4>
+            </div>
+            <ul class="inter-list">
+              <li>Pendekatan transparansi ganda (Data + Visual) berhasil menjawab keresahan psikologis investor atas kondisi aset yang jauh.</li>
+              <li>Transparansi sistem berkontribusi langsung dalam pembentukan persepsi kepercayaan awal (User Trust 4,11).</li>
+              <li>Responden memandang keberadaan CCTV bukan sekadar pelengkap, melainkan instrumen verifikasi krusial.</li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Keterbatasan & Ruang Perbaikan -->
+          <div class="interpretation-card card-limits">
+            <div class="inter-header">
+              <span style="font-size: 1.3rem;">⚠️</span>
+              <h4>Keterbatasan & Ruang Perbaikan</h4>
+            </div>
+            <ul class="inter-list">
+              <li>Kelengkapan laporan portofolio (3,99) menunjukkan kebutuhan akan export dokumen PDF dan rincian biaya pakan yang lebih rinci.</li>
+              <li>UAT mengukur persepsi responden terhadap prototipe aplikasi, bukan bukti kausal bahwa investasi pasti bebas risiko gagal panen.</li>
+              <li>Pengujian belum mencakup variasi konektivitas internet pedesaan ekstrem di remote farm.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION L: CONTRIBUTION AND FUTURE WORK -->
+    <section class="contribution-section" id="contribution">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-tag">10 — Kontribusi & Masa Depan</span>
+          <h2 class="section-title">Apa Kontribusi <span class="text-gradient">Penelitian Ini?</span></h2>
+          <p class="section-subtitle">
+            Sumbangsih ilmiah untuk literatur teknologi finansial agribisnis serta arah pengembangan jangka panjang.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Main Contributions -->
+          <div class="card" style="border-left: 4px solid var(--emerald-primary);">
+            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1.25rem; color: #fff;">
+              Kontribusi Akademik & Praktis
+            </h3>
+            <ul class="comparison-list">
+              <li>
+                <span class="icon">🔹</span>
+                <div>
+                  <strong>Model Transparansi Berlapis:</strong> Mengintegrasikan saluran Price Engine kuantitatif dan visual monitoring kualitatif dalam satu arsitektur platform mobile crowdfunding.
+                </div>
+              </li>
+              <li>
+                <span class="icon">🔹</span>
+                <div>
+                  <strong>Sinergi R&D dan DevOps:</strong> Mendemonstrasikan bagaimana siklus 8 tahap DevOps dapat diterapkan secara terstruktur pada proyek riset teknologi pertanian skala perguruan tinggi.
+                </div>
+              </li>
+              <li>
+                <span class="icon">🔹</span>
+                <div>
+                  <strong>Evaluasi Empiris Terukur:</strong> Menyediakan data kuantitatif dari 101 responden mengenai penerimaan platform transparansi ternak di Indonesia.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Future Work Roadmap -->
+          <div class="card" style="border-left: 4px solid var(--gold-accent);">
+            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1.25rem; color: #fff;">
+              Arah Riset Selanjutnya (Future Work)
+            </h3>
+            <ul class="comparison-list">
+              <li>
+                <span class="icon">🔸</span>
+                <div>
+                  <strong>Pengujian Skala Luas & Longitudinal:</strong> Menguji penerapan platform pada cakupan wilayah geografis kandang yang lebih luas dan durasi pemeliharaan penuh (6–12 bulan).
+                </div>
+              </li>
+              <li>
+                <span class="icon">🔸</span>
+                <div>
+                  <strong>Penyempurnaan Modul Portofolio:</strong> Memperkaya laporan analitik ROI, export laporan pajak, dan visualisasi pemotongan biaya operasional.
+                </div>
+              </li>
+              <li>
+                <span class="icon">🔸</span>
+                <div>
+                  <strong>Uji Inferensial Dampak Kausal:</strong> Menganalisis korelasi statistik inferensial (SEM / PLS) antara transparansi visual terhadap mitigasi persepsi risiko investor.
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION M: RESEARCHER AND REPOSITORY -->
+    <section class="researcher-section" id="researcher">
+      <div class="container">
+        <div class="researcher-box">
+          <!-- Profile Data -->
+          <div>
+            <span class="section-tag" style="margin-bottom: 0.5rem;">Identitas Peneliti</span>
+            <h2 style="font-size: 2rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">Moh. Syaiful Anam</h2>
+            <div style="font-size: 0.95rem; color: var(--emerald-light); font-weight: 700; margin-bottom: 1.25rem;">
+              Teknik Informatika · Universitas Islam Madura
+            </div>
+
+            <ul class="profile-detail-list">
+              <li>
+                <span class="k">NPM</span>
+                <span class="v">: 2022020100078</span>
+              </li>
+              <li>
+                <span class="k">Institusi</span>
+                <span class="v">: Universitas Islam Madura, Pamekasan, Jawa Timur</span>
+              </li>
+              <li>
+                <span class="k">Pembimbing I</span>
+                <span class="v">: Aang Kisnu Darmawan, S.T., M.M.</span>
+              </li>
+              <li>
+                <span class="k">Pembimbing II</span>
+                <span class="v">: Anwari, S.Kom., M.T.</span>
+              </li>
+              <li>
+                <span class="k">Forum Ilmiah</span>
+                <span class="v">: SEHATI 2026 (Seminar Nasional Humaniora & Aplikasi TI)</span>
+              </li>
+              <li>
+                <span class="k">Publikasi</span>
+                <span class="v">: ISSN 2477-0078</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Official Repository Card -->
+          <div class="repo-card">
+            <div class="repo-icon">🐙</div>
+            <h3 style="font-size: 1.25rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">Kode Sumber Penelitian</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.5;">
+              Repositori resmi InvestCow tersedia secara publik di GitHub. Periksa implementasi Flutter, Node.js backend, dan alur CI/CD.
+            </p>
+            <a href="https://github.com/siapaajaboleh888/InvestCow_Project" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Buka GitHub Repository
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION N: FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div style="display:flex; align-items:center; gap:0.6rem; font-size:1.25rem; font-weight:800; color:#fff; margin-bottom:0.4rem;">
+            <img src="assets/images/logo.png" alt="InvestCow" style="width:30px; height:30px; border-radius:50%;">
+            <span>Invest<span style="color:var(--emerald-light);">Cow</span></span>
+            <span class="brand-badge">SEHATI 2026</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 480px;">
+            Platform Crowdfunding Ternak Sapi Berbasis Mobile dengan Transparansi Data Real-Time dan Monitoring Visual.
+          </p>
+        </div>
+
+        <div style="display:flex; gap: 1rem; align-items:center;">
+          <a href="https://github.com/siapaajaboleh888/InvestCow_Project" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            GitHub Repo
+          </a>
+          <button class="btn btn-primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+            Kembali ke Atas ↑
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          Penelitian oleh <strong>Moh. Syaiful Anam</strong> (NPM 2022020100078) · Teknik Informatika, Universitas Islam Madura.
+        </div>
+        <div style="color: var(--emerald-light); font-weight: 600;">
+          Terima kasih telah menjelajahi penelitian InvestCow.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button class="back-to-top" id="back-to-top" title="Kembali ke Atas" aria-label="Kembali ke Atas">
+    ↑
+  </button>
+
+  <!-- Scripts -->
+  <script src="scripts/main.js"></script>
+  <script src="scripts/workflow.js"></script>
+  <script src="scripts/charts.js"></script>
+  <script src="scripts/presentation.js"></script>
+</body>
+</html>
